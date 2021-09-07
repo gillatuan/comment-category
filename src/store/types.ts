@@ -1,1 +1,0 @@
-export const ERROR_GENERAL = 'ERROR_GENERAL';
