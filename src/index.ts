@@ -1,3 +1,3 @@
 import CommentView from "./lib/Comment/CommentView"
 
-export { CommentView }
+export default CommentView
