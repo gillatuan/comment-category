@@ -44,7 +44,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "compile": "npm run clean && cross-env NODE_ENV=production babel src --retain-lines -d dist --copy-files"
+    "compile": "npm run clean && cross-env NODE_ENV=production babel ./src --retain-lines -d ./dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
