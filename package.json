@@ -1,7 +1,17 @@
 {
-  "name": "clone_comment-category",
-  "version": "0.1.0",
+  "name": "own-comment-category",
+  "version": "0.1.1",
   "private": false,
+  "main": "dist/Comment.tsx",
+  "module": "dist/Comment.tsx",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gillatuan/comment-category.git"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
