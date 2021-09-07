@@ -12,7 +12,7 @@ import {
 import ImageItem from "components/ImageItem/ImageItem"
 import PriceTags from "components/Pricetags/PriceTags"
 
-import "lib/comment.scss"
+import "./comment.scss"
 
 type CommentProps = {
   onDataChange: (data: any) => void
