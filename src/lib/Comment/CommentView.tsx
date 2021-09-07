@@ -1,16 +1,19 @@
-import { FC, memo, useEffect, useState } from "react"
+import { memo, useEffect, useState } from "react"
 import _ from "lodash"
 
-import { transformWithKeyMap, transformSuggestionToTag } from "utils/transform"
+import {
+  transformWithKeyMap,
+  transformSuggestionToTag,
+} from "../../utils/transform"
 
-import InputTags from "components/InputTags"
+import InputTags from "../../components/InputTags"
 import {
   CategoryConfig,
   CommentSuggestionResponse,
   Category,
-} from "model/core-model/Config"
-import ImageItem from "components/ImageItem/ImageItem"
-import PriceTags from "components/Pricetags/PriceTags"
+} from "../../model/core-model/Config"
+import ImageItem from "../../components/ImageItem/ImageItem"
+import PriceTags from "../../components/Pricetags/PriceTags"
 
 import "./comment.css"
 
@@ -22,7 +25,7 @@ type CommentProps = {
   onCommentPriceTagChange: (data: any) => void
 }
 
-const CommentView: FC<CommentProps> = (props) => {
+const CommentView = (props: CommentProps) => {
   const { onDataChange, onCommentPriceTagChange } = props
   const [dataTransformCategories, setDataTransformCategories] = useState<any[]>(
     props.categoryConfigData
@@ -100,8 +103,9 @@ const CommentView: FC<CommentProps> = (props) => {
     if (!_.isEmpty(requestCategories)) {
       const requestCategoriesTmp = [...requestCategories]
       const tagsToSuggestion = transformWithKeyMap(tags, keyMap)
+
       tagsToSuggestion.map((item) => {
-        if (item.id == "" || !_.isNumber(item.id)) {
+        if (item.id === "" || !_.isNumber(item.id)) {
           return (item.id = null)
         }
       })

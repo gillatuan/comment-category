@@ -1,13 +1,16 @@
 {
   "name": "own-comment-category",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
-  "main": "dist/Comment.tsx",
-  "module": "dist/Comment.tsx",
+  "main": "dist/CommentView.tsx",
   "files": [
     "dist",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gillatuan/comment-category.git"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -36,9 +39,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build_bk": "react-scripts build",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build_bk1": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build": "tsc",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rimraf dist",
+    "compile": "npm run clean && cross-env NODE_ENV=production babel src --retain-lines -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -58,12 +64,19 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
+    "@babel/preset-react": "^7.14.5",
     "@types/jquery": "^3.5.6",
     "@types/lodash": "^4.14.172",
-    "@types/react-tag-autocomplete": "^6.1.1"
+    "@types/react-tag-autocomplete": "^6.1.1",
+    "cross-env": "^7.0.3"
   }
 }
