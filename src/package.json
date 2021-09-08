@@ -1,0 +1,12 @@
+{
+  "name": "my-form-comment",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "git+https://github.com/gillatuan/comment-category.git",
+  "author": "TuanBui",
+  "license": "TuanBDN",
+  "private": false,
+  "devDependencies": {
+    "@types/jquery": "^3.5.6"
+  }
+}

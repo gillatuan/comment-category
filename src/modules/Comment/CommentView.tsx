@@ -1,19 +1,19 @@
 import { FC, memo, useEffect, useState } from "react"
 import { isEmpty, isNumber } from "lodash"
 
-import { InputTags } from "../../components/InputTags"
-import { ImageItem } from "../../components/ImageItem/ImageItem"
-import { PriceTags } from "../../components/Pricetags/PriceTags"
+import { InputTags } from "components/InputTags"
+import { ImageItem } from "components/ImageItem/ImageItem"
+import { PriceTags } from "components/Pricetags/PriceTags"
 
-import { Category } from "../../model/core-model/Config"
+import { Category } from "model/core-model/Config"
 
 import {
   transformWithKeyMap,
   transformSuggestionToTag,
-} from "../../utils/transform"
+} from "utils/transform"
 
-import { CommentProps } from './CommentView.d'
-import "./comment.css"
+import { CommentProps } from 'modules/Comment/CommentView.d'
+import "Comment/comment.css"
 
 const CommentView: FC<CommentProps> = (props) => {
   const { onDataChange, onCommentPriceTagChange } = props

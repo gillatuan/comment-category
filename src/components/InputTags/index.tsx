@@ -4,9 +4,9 @@ import _ from "lodash"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-import "./index.scss"
+import "components/InputTags/index.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { removeAccents } from "../../utils/removeAccents"
+import { removeAccents } from "utils/removeAccents"
 
 interface ITag {
   id: string | number
@@ -123,7 +123,7 @@ export const InputTags = (props: InputTagsProps) => {
     return filteredSuggestions
   }
 
-  useEffect(() => {
+  /* useEffect(() => {
     $(".react-tags__search-input").on("keyup", function (e) {
       if (
         (e.which == 40 || e.which == 38) &&
@@ -137,7 +137,7 @@ export const InputTags = (props: InputTagsProps) => {
           offsetItem - _window.document.getElementById("ReactTags").offsetHeight
       }
     })
-  }, [])
+  }, []) */
 
   return (
     <>

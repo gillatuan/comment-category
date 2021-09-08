@@ -1,3 +1,3 @@
-import CommentView from "./lib/Comment/CommentView"
+import CommentView from "modules/Comment/CommentView"
 
-export default CommentView
+export { CommentView }

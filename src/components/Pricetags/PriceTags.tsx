@@ -7,9 +7,9 @@ import _ from "lodash"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-import { removeAccents } from "../../utils/removeAccents"
+import { removeAccents } from "utils/removeAccents"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./Pricetags.scss"
+import "components/Pricetags/Pricetags.scss"
 
 interface ITag {
   id: string | number
@@ -148,7 +148,7 @@ export const PriceTags = (props: PriceTagsProps) => {
     return filteredSuggestions
   }
 
-  useEffect(() => {
+  /* useEffect(() => {
     $(".react-tags__search-input").on("keyup", function (e) {
       if (
         (e.which == 40 || e.which == 38) &&
@@ -162,7 +162,7 @@ export const PriceTags = (props: PriceTagsProps) => {
           offsetItem - _window.document.getElementById("ReactTags").offsetHeight
       }
     })
-  }, [])
+  }, []) */
 
   return (
     <>

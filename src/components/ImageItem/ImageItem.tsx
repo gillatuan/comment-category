@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import Lightbox from "react-image-lightbox"
 import axios from "axios"
 
-import { IMAGE_LIMIT } from "../../constants/index"
-import { ResponseUploadImage } from "../../model/core-model/UtilModel"
+import { IMAGE_LIMIT } from "constants/index"
+import { ResponseUploadImage } from "model/core-model/UtilModel"
 
-import "./ImageItem.scss"
+import "components/ImageItem/ImageItem.scss"
 import "react-image-lightbox/style.css"
 
 const _window = (window as any).window
