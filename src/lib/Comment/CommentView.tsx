@@ -17,7 +17,15 @@ import PriceTags from "../../components/Pricetags/PriceTags"
 
 import "./comment.css"
 
-const CommentView = (props: any) => {
+type CommentProps = {
+  onDataChange: (data: any) => void;
+  categoryConfigData: CategoryConfig[];
+  commentSuggestionResponse: CommentSuggestionResponse[];
+  errorsConfig?: any;
+  onCommentPriceTagChange: (data: any) => void;
+};
+
+const CommentView = (props: CommentProps) => {
   const { onDataChange, onCommentPriceTagChange } = props
   const [dataTransformCategories, setDataTransformCategories] = useState<any[]>(
     props.categoryConfigData

@@ -1,0 +1,31 @@
+{
+  "name": "my-comment-category",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "git+https://github.com/gillatuan/comment-category.git",
+  "author": "TuanBui",
+  "license": "TuanBui",
+  "private": false,
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "axios": "^0.21.4",
+    "bootstrap": "^5.1.1",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-image-lightbox": "^5.1.4",
+    "react-tag-autocomplete": "^6.2.0"
+  },
+  "peerDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "axios": "^0.21.4",
+    "bootstrap": "^5.1.1",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-image-lightbox": "^5.1.4",
+    "react-tag-autocomplete": "^6.2.0"
+  }
+}
