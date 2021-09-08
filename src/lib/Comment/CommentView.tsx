@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react"
+import { FC, memo, useEffect, useState } from "react"
 import _ from "lodash"
 
 import {
@@ -8,24 +8,15 @@ import {
 
 import InputTags from "../../components/InputTags"
 import {
-  CategoryConfig,
-  CommentSuggestionResponse,
   Category,
 } from "../../model/core-model/Config"
 import ImageItem from "../../components/ImageItem/ImageItem"
 import PriceTags from "../../components/Pricetags/PriceTags"
 
+import { CommentProps } from './CommentView.d'
 import "./comment.css"
 
-type CommentProps = {
-  onDataChange: (data: any) => void;
-  categoryConfigData: CategoryConfig[];
-  commentSuggestionResponse: CommentSuggestionResponse[];
-  errorsConfig?: any;
-  onCommentPriceTagChange: (data: any) => void;
-};
-
-const CommentView = (props: CommentProps) => {
+const CommentView: FC<CommentProps> = (props) => {
   const { onDataChange, onCommentPriceTagChange } = props
   const [dataTransformCategories, setDataTransformCategories] = useState<any[]>(
     props.categoryConfigData
