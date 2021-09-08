@@ -1,6 +1,6 @@
 {
   "name": "my-comment-category",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.ts",
   "repository": "git+https://github.com/gillatuan/comment-category.git",
   "author": "TuanBui",
