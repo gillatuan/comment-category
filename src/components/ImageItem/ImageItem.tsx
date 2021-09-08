@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import Lightbox from "react-image-lightbox"
 import axios from "axios"
 
@@ -18,7 +18,7 @@ type ImageItemProp = {
   categoryName: string
 }
 
-const ImageItem: React.FC<ImageItemProp> = (props) => {
+export const ImageItem = (props: ImageItemProp) => {
   const [imageList, setImageList] = useState<Array<ResponseUploadImage>>([])
   const [photoIndex, setPhotoIndex] = useState(0)
   const [isOpenLightBox, setIsOpenLightBox] = useState(false)
@@ -182,15 +182,15 @@ const ImageItem: React.FC<ImageItemProp> = (props) => {
           }
           prevSrc={
             imageListLightBox[
-              (photoIndex + imageListLightBox.length - 1) %
-                imageListLightBox.length
+            (photoIndex + imageListLightBox.length - 1) %
+            imageListLightBox.length
             ]
           }
           onCloseRequest={() => setIsOpenLightBox(false)}
           onMovePrevRequest={() =>
             setPhotoIndex(
               (photoIndex + imageListLightBox.length - 1) %
-                imageListLightBox.length
+              imageListLightBox.length
             )
           }
           onMoveNextRequest={() =>
@@ -201,5 +201,3 @@ const ImageItem: React.FC<ImageItemProp> = (props) => {
     </>
   )
 }
-
-export default ImageItem

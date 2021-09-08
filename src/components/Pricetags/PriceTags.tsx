@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 
 import ReactTags, { Tag, TagComponentProps } from "react-tag-autocomplete"
 import axios from "axios"
@@ -38,7 +38,7 @@ type PriceTagsProps = {
 
 const _window = (window as any).window
 
-const PriceTags: FC<PriceTagsProps> = (props) => {
+export const PriceTags = (props: PriceTagsProps) => {
   const [tags, setTags] = useState<ITag[]>(props.tags)
 
   const [suggestions, setSuggestions] = useState<ISuggestion[]>(
@@ -228,5 +228,3 @@ const PriceTags: FC<PriceTagsProps> = (props) => {
     </>
   )
 }
-
-export default PriceTags

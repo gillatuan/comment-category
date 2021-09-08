@@ -1,17 +1,16 @@
 import { FC, memo, useEffect, useState } from "react"
-import _ from "lodash"
+import { isEmpty, isNumber } from "lodash"
+
+import { InputTags } from "../../components/InputTags"
+import { ImageItem } from "../../components/ImageItem/ImageItem"
+import { PriceTags } from "../../components/Pricetags/PriceTags"
+
+import { Category } from "../../model/core-model/Config"
 
 import {
   transformWithKeyMap,
   transformSuggestionToTag,
 } from "../../utils/transform"
-
-import InputTags from "../../components/InputTags"
-import {
-  Category,
-} from "../../model/core-model/Config"
-import ImageItem from "../../components/ImageItem/ImageItem"
-import PriceTags from "../../components/Pricetags/PriceTags"
 
 import { CommentProps } from './CommentView.d'
 import "./comment.css"
@@ -34,8 +33,8 @@ const CommentView: FC<CommentProps> = (props) => {
 
   useEffect(() => {
     if (
-      !_.isEmpty(props.commentSuggestionResponse) &&
-      !_.isEmpty(props.categoryConfigData)
+      !isEmpty(props.commentSuggestionResponse) &&
+      !isEmpty(props.categoryConfigData)
     ) {
       //Transform data: from suggestion format to tag format
       const keyMapSuggestionToTag = {
@@ -70,7 +69,7 @@ const CommentView: FC<CommentProps> = (props) => {
       })
 
       setRequestCategories(requestCommentTmp)
-    } else if (!_.isEmpty(props.categoryConfigData)) {
+    } else if (!isEmpty(props.categoryConfigData)) {
       // Set default request comment (categoryId and tags)
       let requestCommentTmp: Category[] = []
       props.categoryConfigData.forEach((categoryConfigItem: any) => {
@@ -91,12 +90,12 @@ const CommentView: FC<CommentProps> = (props) => {
       id: "id",
       name: "comment",
     }
-    if (!_.isEmpty(requestCategories)) {
+    if (!isEmpty(requestCategories)) {
       const requestCategoriesTmp = [...requestCategories]
       const tagsToSuggestion = transformWithKeyMap(tags, keyMap)
 
       tagsToSuggestion.map((item) => {
-        if (item.id === "" || !_.isNumber(item.id)) {
+        if (item.id === "" || !isNumber(item.id)) {
           return (item.id = null)
         }
       })
@@ -120,7 +119,7 @@ const CommentView: FC<CommentProps> = (props) => {
   }
 
   const onHandleChangeImage = (imageList: any, categoryId: number) => {
-    if (!_.isEmpty(requestCategories)) {
+    if (!isEmpty(requestCategories)) {
       const requestCategoriesTmp = [...requestCategories]
       requestCategoriesTmp.find(
         (item) => item.categoryId === categoryId

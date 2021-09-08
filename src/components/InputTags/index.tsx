@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import ReactTags, { Tag, TagComponentProps } from "react-tag-autocomplete"
 import _ from "lodash"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -35,7 +35,7 @@ type InputTagsProps = {
 
 const _window = (window as any).window
 
-const InputTags: FC<InputTagsProps> = (props) => {
+export const InputTags = (props: InputTagsProps) => {
   const [tags, setTags] = useState<ITag[]>(props.tags)
 
   const [suggestions, setSuggestions] = useState<ISuggestion[]>(
@@ -178,5 +178,3 @@ const InputTags: FC<InputTagsProps> = (props) => {
     </>
   )
 }
-
-export default InputTags
