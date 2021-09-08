@@ -29,7 +29,7 @@ var axios = _interopDefault(require('axios'));
 require('components/ImageItem/ImageItem.scss');
 require('react-image-lightbox/style.css');
 require('components/Pricetags/Pricetags.scss');
-require('Comment/comment.css');
+require('modules/Comment/comment.scss');
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.

@@ -13,7 +13,7 @@ import {
 } from "utils/transform"
 
 import { CommentProps } from 'modules/Comment/CommentView.d'
-import "Comment/comment.css"
+import "modules/Comment/comment.scss"
 
 const CommentView: FC<CommentProps> = (props) => {
   const { onDataChange, onCommentPriceTagChange } = props
