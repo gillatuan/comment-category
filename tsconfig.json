@@ -4,7 +4,7 @@
     "esModuleInterop": true,
     "outDir": "./lib",
     "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "removeComments": true,
@@ -12,9 +12,23 @@
     "sourceMap": true,
     "jsx": "react-jsx",
     "typeRoots": [
-      "index.ts",
+      "src/index.tsx",
       "node_modules/@types"
-    ]
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": [
     "./src/**/*.tsx",
