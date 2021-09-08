@@ -1,7 +1,7 @@
 {
   "name": "my-comment-category",
-  "version": "1.0.7",
-  "main": "lib/index.ts",
+  "version": "1.0.8",
+  "main": "index.ts",
   "author": "TuanBui",
   "license": "TuanBui",
   "private": false,
