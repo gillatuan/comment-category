@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import ReactTags, { Tag, TagComponentProps } from "react-tag-autocomplete"
 import axios from "axios"
@@ -148,7 +148,7 @@ export const PriceTags = (props: PriceTagsProps) => {
     return filteredSuggestions
   }
 
-  /* useEffect(() => {
+  useEffect(() => {
     $(".react-tags__search-input").on("keyup", function (e) {
       if (
         (e.which == 40 || e.which == 38) &&
@@ -162,7 +162,7 @@ export const PriceTags = (props: PriceTagsProps) => {
           offsetItem - _window.document.getElementById("ReactTags").offsetHeight
       }
     })
-  }, []) */
+  }, [])
 
   return (
     <>

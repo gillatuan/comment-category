@@ -123,7 +123,7 @@ export const InputTags = (props: InputTagsProps) => {
     return filteredSuggestions
   }
 
-  /* useEffect(() => {
+  useEffect(() => {
     $(".react-tags__search-input").on("keyup", function (e) {
       if (
         (e.which == 40 || e.which == 38) &&
@@ -137,7 +137,7 @@ export const InputTags = (props: InputTagsProps) => {
           offsetItem - _window.document.getElementById("ReactTags").offsetHeight
       }
     })
-  }, []) */
+  }, [])
 
   return (
     <>

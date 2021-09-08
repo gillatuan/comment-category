@@ -98,6 +98,8 @@ const CommentView: FC<CommentProps> = (props) => {
         if (item.id === "" || !isNumber(item.id)) {
           return (item.id = null)
         }
+
+        return item
       })
 
       if (categoryId === 28) {
