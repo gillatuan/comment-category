@@ -1,21 +1,21 @@
-import { FC, memo, useEffect, useState } from "react"
+import React, { FC, memo, useEffect, useState } from "react"
 import { isEmpty, isNumber } from "lodash"
 
-import { InputTags } from "components/InputTags"
-import { ImageItem } from "components/ImageItem/ImageItem"
-import { PriceTags } from "components/Pricetags/PriceTags"
+import { InputTags } from "../../components/InputTags"
+import { ImageItem } from "../../components/ImageItem/ImageItem"
+import { PriceTags } from "../../components/Pricetags/PriceTags"
 
-import { Category } from "model/core-model/Config"
+import { Category } from "../../model/core-model/Config"
 
 import {
   transformWithKeyMap,
   transformSuggestionToTag,
-} from "utils/transform"
+} from "../../utils/transform"
 
-import { CommentProps } from 'modules/Comment/CommentView.d'
-import "modules/Comment/comment.scss"
+import { CommentProps } from './CommentView.d'
+// import "./comment.scss"
 
-const CommentView: FC<CommentProps> = (props) => {
+const CommentView = (props: CommentProps) => {
   const { onDataChange, onCommentPriceTagChange } = props
   const [dataTransformCategories, setDataTransformCategories] = useState<any[]>(
     props.categoryConfigData
@@ -60,7 +60,7 @@ const CommentView: FC<CommentProps> = (props) => {
       // Set default request comment (categoryId and tags)
       let requestCommentTmp: Category[] = []
       commentWithConfigureAndTags.forEach((category: any) => {
-        let categoryTmp = {
+        let categoryTmp: Category = {
           categoryId: category.categoryId,
           photos: [],
           comments: [],
@@ -73,7 +73,7 @@ const CommentView: FC<CommentProps> = (props) => {
       // Set default request comment (categoryId and tags)
       let requestCommentTmp: Category[] = []
       props.categoryConfigData.forEach((categoryConfigItem: any) => {
-        let categoryTmp = {
+        let categoryTmp: Category = {
           categoryId: categoryConfigItem.categoryId,
           photos: [],
           comments: [],

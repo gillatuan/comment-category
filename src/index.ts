@@ -1,3 +1,4 @@
-import CommentView from "modules/Comment/CommentView"
+import './index.bundle.js'
 
-export { CommentView }
+export * from "./components/HelloWorld/HelloWorld"
+export * as CommentView from './modules/Comment/CommentView'

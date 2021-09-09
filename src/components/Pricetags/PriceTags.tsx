@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import ReactTags, { Tag, TagComponentProps } from "react-tag-autocomplete"
 import axios from "axios"
 
+import $ from 'jquery'
 import _ from "lodash"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-import { removeAccents } from "utils/removeAccents"
+import { removeAccents } from "../../utils/removeAccents"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "components/Pricetags/Pricetags.scss"
+// import "./Pricetags.scss"
 
 interface ITag {
   id: string | number
@@ -149,7 +150,7 @@ export const PriceTags = (props: PriceTagsProps) => {
   }
 
   useEffect(() => {
-    $(".react-tags__search-input").on("keyup", function (e) {
+    $(".react-tags__search-input").on("keyup", function (e: any) {
       if (
         (e.which == 40 || e.which == 38) &&
         _window.document.getElementById("ReactTags") != undefined

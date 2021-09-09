@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import ReactTags, { Tag, TagComponentProps } from "react-tag-autocomplete"
 import _ from "lodash"
+import $ from 'jquery'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
-import "components/InputTags/index.scss"
+// import "./index.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { removeAccents } from "utils/removeAccents"
+import { removeAccents } from "../../utils/removeAccents"
 
 interface ITag {
   id: string | number
@@ -124,7 +125,7 @@ export const InputTags = (props: InputTagsProps) => {
   }
 
   useEffect(() => {
-    $(".react-tags__search-input").on("keyup", function (e) {
+    $(".react-tags__search-input").on("keyup", function (e: any) {
       if (
         (e.which == 40 || e.which == 38) &&
         _window.document.getElementById("ReactTags") != undefined

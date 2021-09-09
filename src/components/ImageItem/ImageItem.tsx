@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Lightbox from "react-image-lightbox"
 import axios from "axios"
 
-import { IMAGE_LIMIT } from "constants/index"
-import { ResponseUploadImage } from "model/core-model/UtilModel"
+import { IMAGE_LIMIT } from "../../constants/index"
+import { ResponseUploadImage } from "../../model/core-model/UtilModel"
 
-import "components/ImageItem/ImageItem.scss"
+// import "./ImageItem.scss"
 import "react-image-lightbox/style.css"
 
 const _window = (window as any).window
@@ -28,7 +28,7 @@ export const ImageItem = (props: ImageItemProp) => {
   const onClickUpload = () => {
     if (imageList.length >= IMAGE_LIMIT) {
       _window.showPropzyAlertPopupGeneral(
-        `Đã đạt giới hạn ${IMAGE_LIMIT} hình ảnh`
+        `Đã đạt giới hạn 122 ${IMAGE_LIMIT} hình ảnh`
       )
       return
     }
