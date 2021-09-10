@@ -1,4 +1,4 @@
-import React, { FC, memo, useEffect, useState } from "react"
+import React, { memo, useEffect, useState } from "react"
 import { isEmpty, isNumber } from "lodash"
 
 import { InputTags } from "../../components/InputTags"
@@ -15,7 +15,7 @@ import {
 import { CommentProps } from './CommentView.d'
 // import "./comment.scss"
 
-const CommentView = (props: CommentProps) => {
+export const CommentView = (props: CommentProps) => {
   const { onDataChange, onCommentPriceTagChange } = props
   const [dataTransformCategories, setDataTransformCategories] = useState<any[]>(
     props.categoryConfigData
@@ -195,5 +195,3 @@ const CommentView = (props: CommentProps) => {
     </div>
   )
 }
-
-export default memo(CommentView)
