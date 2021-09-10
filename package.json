@@ -1,6 +1,6 @@
 {
   "name": "my-comment-category",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "main": "lib/index.ts",
   "license": "MIT",
   "types": "lib",
@@ -19,6 +19,7 @@
     "@types/react-dom": "^17.0.9",
     "axios": "^0.21.4",
     "bootstrap": "^5.1.1",
+    "clean-webpack-plugin": "^4.0.0",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "node-sass": "^6.0.1",
@@ -46,6 +47,8 @@
     "css-modules-typescript-loader": "^4.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.2.2",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "path": "^0.12.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -78,7 +81,7 @@
     "prepare": "yarn build",
     "webpack": "webpack",
     "delete_build": "rm -rf lib && rm -rf build",
-    "copy_css": "babel src/index.bundle.js --out-dir lib --source-maps inline --copy-files",
+    "copy_css": "babel src/style.min.css --out-dir lib --source-maps inline --copy-files",
     "prepublish": "yarn delete_build && yarn webpack && yarn copy_css"
   }
 }
