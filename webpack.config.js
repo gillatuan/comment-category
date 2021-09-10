@@ -4,7 +4,11 @@ const path = require("path");
 module.exports = {
   // entry: "./src/index.ts",
   entry: [
-    './src/components/HelloWorld/HelloWorld.scss'
+    './src/components/HelloWorld/HelloWorld.scss',
+    './src/components/ImageItem/ImageItem.scss',
+    './src/components/InputTags/index.scss',
+    './src/components/Pricetags/Pricetags.scss',
+    './src/modules/Comment/comment.scss',
   ],
   output: { path: path.join(__dirname, "src"), filename: "index.bundle.js" },
   mode: process.env.NODE_ENV || "development",
